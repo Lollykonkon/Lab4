@@ -3,10 +3,16 @@ public class Two {
         try {
             System.out.println("0");
             throw new RuntimeException("Непроверяемая ошибка");
-            //System.out.println("1");
+            System.out.println("1");
         } catch (Exception e) {
             System.out.println("2 "+ e );
         }
         System.out.println("3");
     }
 }
+/*вывод "0"
+задается исключение
+ошибка "unreachable statement"
+задается обработка исключения
+вывод "2" и обрабатывается исключение(вывод "Непроверяемая ошибка")
+вывод "3"*/
